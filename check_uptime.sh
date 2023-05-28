@@ -16,8 +16,6 @@ do
   esac
 done
 
-echo "WARN $WARN | CRIT $CRIT"
-
 NOW=$(date +%Y-%m-%d)
 SYSUP=$(uptime -s | awk -F " " '{ print $1 }')
 
