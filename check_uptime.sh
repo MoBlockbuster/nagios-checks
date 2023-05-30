@@ -19,7 +19,6 @@ done
 NOW=$(date +%Y-%m-%d)
 SYSUP=$(uptime -s | awk -F " " '{ print $1 }')
 
-#CALC=$(echo "$(($(date -d "${SYSUP}" '+%s') - $(date -d "${NOW}" '+%s')))")
 CALC=$(echo "$(($(date -d "${NOW}" '+%s') - $(date -d "${SYSUP}" '+%s')))")
 RESULT=$((${CALC}/3600/24))
 
