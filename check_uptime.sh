@@ -25,15 +25,15 @@ RESULT=$((${CALC}/3600/24))
 
 if [ ${RESULT} -lt ${WARN} ]
 then
-  echo "SYSTEM UPTIME IS OK"
+  echo "SYSTEM UPTIME IS OK = ${RESULT}"
   exit 0
 elif [ ${RESULT} -ge ${WARN} ] && [ ${RESULT} -lt ${CRIT} ]
 then
-  echo "SYSTEM UPTIME WARNING"
+  echo "SYSTEM UPTIME WARNING = ${RESULT}"
   exit 1
 elif [ ${RESULT} -ge ${CRIT} ]
 then
-  echo "SYSTEM UPTIME CRITICAL"
+  echo "SYSTEM UPTIME CRITICAL = ${RESULT}"
   exit 2
 else
   echo "SYSTEM UPTIME UNKOWN"
