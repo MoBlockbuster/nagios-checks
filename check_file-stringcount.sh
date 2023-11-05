@@ -18,8 +18,6 @@ do
   esac
 done
 
-NOW=$(date +%Y-%m-%d)
-
 STRINGCOUNT=$(cat ${FILE} | grep ${STRING} | wc -l)
 
 if [ ${STRINGCOUNT} -lt ${WARN} ]
