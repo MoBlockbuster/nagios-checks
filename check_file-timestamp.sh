@@ -11,8 +11,6 @@ do
   case $options in
        d) DIR=${OPTARG};;
        m) MINUTES=${OPTARG};;
-       w) WARN=${OPTARG};;
-       c) CRIT=${OPTARG};;
        v) VERBOSE="ON";;
        :) echo "YOU HAVE TO USE -d DIRECTORY -m MINUTES. Parameter -v for verbose" && exit 1;;
        *) echo "Parameter unknown. YOU HAVE TO USE -d DIRECTORY -m MINUTES. Parameter -v for verbose" && exit 1;;
